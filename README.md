@@ -6,7 +6,9 @@ Requirements for Linux:
   - NFSd installed
   - nfsd, rpc_bind,mountd allowed in firewall for Vagant network
   - vagrant-hostupdater(```vagrant plugin install vagrant-hostsupdater```)
+  
 Requirements for Windows:
+
   - Windows 10 
   - Vagrant
   - VirtualBox
