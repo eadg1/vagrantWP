@@ -13,8 +13,8 @@ env:
   WPADMPASS: ""
   WPADMEMAIL: "email@email.com"
   WP_VERSION: "5.5.3"
-  GIT_REPO: "GIT_SITE/REPO.git"
-  GIT_PASS: '' #dont forget to escape special chars. if any
+  GIT_REPO: "GIT_SITE/REPO.git" #w/o  moniker
+  GIT_PASS: '' #dont forget to escape special chars if any
   GIT_USER: ""
   DB_DUMP: "/config/sql/dump.sql"
   SITE_FOLDER: "www/" #must exist
