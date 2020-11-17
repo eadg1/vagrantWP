@@ -6,6 +6,19 @@ time_start="$(date +%s)"
 vagrant_domain=$1
 
 
+# Swap
+echo "Setting up swap..."
+fallocate -l 2G /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+sh -c 'echo "/swapfile none swap sw 0 0" >> /etc/fstab'
+sysctl vm.swappiness=10
+sysctl vm.vfs_cache_pressure=50
+sh -c "printf 'vm.swappiness=10\n' >> /etc/sysctl.conf"
+sh -c "printf 'vm.vfs_cache_pressure=50\n' >> /etc/sysctl.conf"
+
+
 # Set MySQL default root password
 echo "Setting up root MySQL password..."
 echo mariadb-server mysql-server/root_password password password | debconf-set-selections
@@ -143,6 +156,7 @@ usermod -a -G www-data ubuntu
 mkdir -p /srv/www/html/wordpress
 chown -R www-data:www-data /srv/www/
 
+
 #checkout theme
 mkdir /srv/tmp
 cd /srv/tmp
@@ -174,7 +188,8 @@ sudo -u www-data  wp plugin install contact-form-7 \
 #install theme
 cp -r /srv/tmp/onix.kr.ua/wordpress/wp-content/themes/onix-ua /srv/www/html/wordpress/wp-content/themes/onix-ua
 cd /srv/www/html/wordpress/wp-content/themes/onix-ua
-npm install
+npm cache verify
+npm install --no-bin-links
 
 
 #Enable theme

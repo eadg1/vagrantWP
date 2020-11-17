@@ -14,9 +14,9 @@ Vagrant.configure(2) do |config|
   config.vm.hostname = settings['vagrant_domain']
   config.hostsupdater.aliases = ["mail.#{settings['vagrant_domain']}", "db.#{settings['vagrant_domain']}"]
 
-  config.vm.synced_folder settings['SITE_FOLDER'], "/srv/www/",  type: "nfs", mount_options:["soft", "nolock"],  :linux__nfs_options => ["rw"]
-  config.vm.synced_folder settings['LOGS_FOLDER'], "/srv/log/", type: "nfs", mount_options:["soft", "nolock"],  :linux__nfs_options => ["rw"]
-  config.vm.synced_folder "config/", "/srv/config", type: "nfs", mount_options:["soft", "nolock"],  :linux__nfs_options => ["rw"]
+  config.vm.synced_folder settings['SITE_FOLDER'], "/srv/www/",  type: "nfs", mount_options:["soft", "nolock"]
+  config.vm.synced_folder settings['LOGS_FOLDER'], "/srv/log/", type: "nfs", mount_options:["soft", "nolock"]
+  config.vm.synced_folder "config/", "/srv/config", type: "nfs", mount_options:["soft", "nolock"]
 
   config.vm.provider "virtualbox" do |vb|
     vb.gui  = false

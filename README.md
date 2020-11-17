@@ -1,13 +1,17 @@
-### VAGRANT Environment for WP dev - currently for Linux only
-Requirements:
+### VAGRANT Environment for WPdev
+Requirements for Linux:
   - Linux host kernel v.5.x
   - Vagrant
-  - VBox
+  - VirtualBox
   - NFSd installed
   - nfsd, rpc_bind,mountd allowed in firewall for Vagant network
   - vagrant-hostupdater(```vagrant plugin install vagrant-hostsupdater```)
-
-
+Requirements for Windows:
+  - Windows 10 
+  - Vagrant
+  - VirtualBox
+  - vagrant pluginsinstalled: vagrant-vbguest, vagrant-hostupdater, vagrant-winnfsd
+  - admin-run shell (e.g. cmd -> Run As Administrator, or Posh, or FarManager)
 1.  Clone repo
 2.  Get sql dump of live db
 3.  Copy config.yml.sample as config.yml
