@@ -5,7 +5,7 @@ Requirements:
   - VBox
   - NFSd installed
   - nfsd, rpc_bind,mountd allowed in firewall for Vagant network
-  - vagrant-hostupdater('''vagrant plugin install vagrant-hostsupdater''')
+  - vagrant-hostupdater(```vagrant plugin install vagrant-hostsupdater```)
 
 1 Clone repo
 2 Copy config.yml.sample as config.yml
