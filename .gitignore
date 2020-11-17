@@ -1,0 +1,4 @@
+.vagrant
+logs/*.log
+www/phpmyadmin
+config.yml

@@ -1,0 +1,21 @@
+env:
+  vagrant_domain: "SITE_NAME.local"
+  vagrant_network: "192.168.32."
+  DBROOTPASS: ""
+  DBPREFIX: "wp_"
+  DBNAME: ""
+  DBUSER: ""
+  DBPASS: ""
+  WPURL: "http://SITE_NAME.local/"
+  WPHOST: "SITE_NAME.local"
+  WPSITENAME: ""
+  WPADMUSER: "admin" #stick to production site admin login
+  WPADMPASS: ""
+  WPADMEMAIL: "email@email.com"
+  WP_VERSION: "5.5.3"
+  GIT_REPO: "GIT_SITE/REPO.git"
+  GIT_PASS: '' #dont forget to escape special chars. if any
+  GIT_USER: ""
+  DB_DUMP: "/config/sql/dump.sql"
+  SITE_FOLDER: "www/" #must exist
+  LOGS_FOLDER: "logs/" #must exist
