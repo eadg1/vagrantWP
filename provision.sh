@@ -172,7 +172,7 @@ sudo -u www-data  wp plugin install contact-form-7 \
                                     wonderm00ns-simple-facebook-open-graph-tags --activate
 
 #install theme
-cp -r /tmp/onix.kr.ua/wordpress/wp-content/themes/onix-ua /srv/www/html/wordpress/wp-content/themes/onix-ua
+cp -r /srv/tmp/onix.kr.ua/wordpress/wp-content/themes/onix-ua /srv/www/html/wordpress/wp-content/themes/onix-ua
 cd /srv/www/html/wordpress/wp-content/themes/onix-ua
 npm install
 
