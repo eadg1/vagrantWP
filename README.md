@@ -12,7 +12,7 @@ Requirements for Windows:
   - Windows 10 
   - Vagrant
   - VirtualBox
-  - vagrant pluginsinstalled: vagrant-vbguest, vagrant-hostupdater, vagrant-winnfsd
+  - vagrant plugins installed: vagrant-vbguest, vagrant-hostupdater, vagrant-winnfsd
   - admin-run shell (e.g. cmd -> Run As Administrator, or Posh, or FarManager)
 1.  Clone repo
 2.  Get sql dump of live db
